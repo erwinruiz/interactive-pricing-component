@@ -1,0 +1,22 @@
+.header {
+  background: url("../images/pattern-circles.svg") no-repeat 50%;
+  height: 14.5rem;
+  margin: 5.7rem 2.4rem 0;
+  padding-top: 3.2rem;
+  text-align: center;
+}
+.header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--Dark-Desaturated-Blue);
+  margin-bottom: 0.9rem;
+}
+.header p {
+  color: var(--Grayish-Blue);
+  font-weight: 600;
+  font-size: 1.3rem;
+  line-height: 2.3rem;
+}
+.header p span {
+  display: block;
+}

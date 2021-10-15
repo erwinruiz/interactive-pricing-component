@@ -31,4 +31,13 @@ body {
   margin: 0;
   font-family: "Manrope", sans-serif;
   font-size: 1.5rem;
+  background-image: url("./images/bg-pattern.svg");
+  background-repeat: no-repeat;
+}
+/* Globals */
+h1 {
+  margin: 0;
+}
+p {
+  margin: 0;
 }
