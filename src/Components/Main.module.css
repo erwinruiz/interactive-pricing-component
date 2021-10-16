@@ -1,0 +1,209 @@
+.main {
+  background-color: var(--white);
+  margin: 3.2rem 2.4rem 0;
+  padding: 3.4rem 0 3.1rem;
+  border-radius: 0.8rem;
+  height: 47.8rem;
+  max-width: 54rem;
+  box-shadow: 0 3rem 4rem var(--box-shadow);
+}
+.first-section {
+  padding: 0 2.4rem;
+}
+.first-section .pageviews {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-color);
+  text-transform: uppercase;
+  letter-spacing: 0.171rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.selector-bar-container {
+  height: 4rem;
+  margin-bottom: 2.4rem;
+}
+.first-section .progress-bar-container {
+  background-color: var(--empty-slider-bar);
+  height: 0.8rem;
+  border-radius: 0.5rem;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.first-section .current-progress-bar {
+  background-color: var(--full-slider-bar);
+  width: 50%;
+  height: 100%;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.current-progress-bar .icon-slider-container {
+  background-color: var(--slider-background);
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1.5rem var(--slider-background);
+  position: relative;
+  left: 2rem;
+}
+.current-progress-bar .icon-slider-container img {
+  pointer-events: none;
+  user-select: none;
+}
+.current-progress-bar .icon-slider-container:hover {
+  background-color: var(--slider-hover);
+}
+.current-progress-bar .icon-slider-container:active {
+  cursor: grabbing;
+  background-color: var(--slider-active);
+}
+.first-section .price {
+  font-size: 3.2rem;
+  font-weight: 800;
+  color: var(--title-color);
+  text-align: center;
+  margin-bottom: 3.4rem;
+}
+.first-section .price span {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+.first-section .billing-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 2rem;
+  margin-bottom: 3.8rem;
+}
+.first-section .billing-options p {
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 4.3rem;
+  height: 2.2rem;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--toggle-background);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.4rem;
+  width: 1.4rem;
+  left: 0.4rem;
+  bottom: 0.4rem;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: var(--toggle-hover);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 0.1rem var(--toggle-hover);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(2.6rem);
+  -ms-transform: translateX(2.6rem);
+  transform: translateX(2.6rem);
+  left: 0rem;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 1.5rem;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+.billing-options .discount {
+  background-color: var(--discount-background);
+  border-radius: 0.95rem;
+  height: 1.9rem;
+  width: 4.1rem;
+}
+.billing-options .discount span {
+  display: none;
+}
+.billing-options .discount p {
+  color: var(--discount-text);
+  font-weight: 800;
+  text-align: center;
+}
+.main .horizontal-line {
+  border-top: 0.1rem solid var(--horizontal-line);
+  margin-bottom: 2.4rem;
+}
+.second-section {
+  padding: 0 2.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.second-section .features {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 1rem;
+  margin-bottom: 3.2rem;
+}
+.second-section .features div {
+  display: flex;
+  align-items: center;
+  column-gap: 1.605rem;
+}
+.second-section .features p {
+  display: inline;
+  color: var(--text-color);
+  font-size: 1.2rem;
+}
+.second-section button {
+  background-color: var(--CTA-background);
+  color: var(--CTA-text);
+  border: none;
+  height: 4.1rem;
+  width: 17rem;
+  border-radius: 2.05rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: "Manrope", sans-serif;
+}
+.second-section button:hover {
+  cursor: pointer;
+  color: var(--white);
+}

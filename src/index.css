@@ -1,20 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
 :root {
-  /* Primary */
-  --Soft-Cyan: hsl(174, 77%, 80%); /* (Full Slider Bar) */
-  --Strong-Cyan: hsl(174, 86%, 45%); /* (Slider Backround) */
-  --Light-Grayish-Red: hsl(14, 92%, 95%); /* (Discount Background) */
-  --Light-Red: hsl(15, 100%, 70%); /* (Discount Text) */
-  --Pale-Blue: hsl(226, 100%, 87%); /* (CTA Text) */
+  --full-slider-bar: hsl(174, 77%, 80%);
+  --slider-background: hsl(174, 86%, 45%);
+  --discount-background: hsl(14, 92%, 95%);
+  --discount-text: hsl(15, 100%, 70%);
+  --CTA-text: hsl(226, 100%, 87%);
+  --slider-hover: #7aeadf;
+  --slider-active: #24aea1;
+  --toggle-hover: var(--slider-hover);
+  --horizontal-line: #ecf0fb;
 
-  /* Neutral */
-  --White: hsl (0, 0%, 100%); /* (Pricing Component Background) */
-  --Very-Pale-Blue: hsl(230, 100%, 99%); /* (Main Background) */
-  --Light-Grayish-Blue: hsl(224, 65%, 95%); /* (Empty Slider Bar) */
-  --Light-Grayish-Blue: hsl(223, 50%, 87%); /* (Toggle Background) */
-  --Grayish-Blue: hsl(225, 20%, 60%); /* (Text) */
-  --Dark-Desaturated-Blue: hsl(227, 35%, 25%); /* (Text & CTA Background) */
+  --white: #ffffff;
+  --empty-slider-bar: hsl(224, 65%, 95%);
+  --toggle-background: hsl(223, 50%, 87%);
+  --text-color: #848ead;
+  --title-color: #293356;
+  --CTA-background: var(--title-color);
+  --box-shadow: #f1f5fe;
 }
 
 html {
@@ -33,6 +36,7 @@ body {
   font-size: 1.5rem;
   background-image: url("./images/bg-pattern.svg");
   background-repeat: no-repeat;
+  background-color: var(--white);
 }
 /* Globals */
 h1 {

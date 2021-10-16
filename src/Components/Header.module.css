@@ -8,11 +8,11 @@
 .header h1 {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--Dark-Desaturated-Blue);
+  color: var(--title-color);
   margin-bottom: 0.9rem;
 }
 .header p {
-  color: var(--Grayish-Blue);
+  color: var(--text-color);
   font-weight: 600;
   font-size: 1.3rem;
   line-height: 2.3rem;
