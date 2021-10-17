@@ -155,6 +155,9 @@ input:checked + .slider:before {
   border-radius: 0.95rem;
   height: 1.9rem;
   width: 4.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .billing-options .discount span {
   display: none;
@@ -163,6 +166,7 @@ input:checked + .slider:before {
   color: var(--discount-text);
   font-weight: 800;
   text-align: center;
+  font-size: 1rem;
 }
 .main .horizontal-line {
   border-top: 0.1rem solid var(--horizontal-line);
@@ -206,4 +210,70 @@ input:checked + .slider:before {
 .second-section button:hover {
   cursor: pointer;
   color: var(--white);
+}
+
+/* To center the main component */
+@media (min-width: 588px) {
+  .main {
+    margin: 3.2rem auto 0;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .main {
+    padding: 4rem 0 3.1rem;
+    height: 39.7rem;
+  }
+  .first-section {
+    padding: 0 4.6rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    row-gap: 2.4rem;
+  }
+  .first-section .pageviews {
+    font-size: 1.4rem;
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .selector-bar-container {
+    grid-column: 1 / 3;
+    margin-bottom: 1.6rem;
+  }
+  .first-section .price {
+    font-size: 4rem;
+    text-align: right;
+    margin-bottom: 0;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .first-section .price span {
+    font-size: 1.6rem;
+  }
+  .first-section .billing-options {
+    align-items: center;
+    margin-left: 10.8rem;
+    margin-bottom: 4rem;
+    grid-column: 1 / 3;
+  }
+  .billing-options .discount {
+    width: 8rem;
+  }
+  .billing-options .discount span {
+    display: initial;
+  }
+  .main .horizontal-line {
+    margin-bottom: 3.2rem;
+  }
+  .second-section {
+    padding: 0 4.6rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .second-section .features {
+    align-items: flex-start;
+    margin-bottom: 0;
+  }
 }
