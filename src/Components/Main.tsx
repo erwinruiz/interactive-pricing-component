@@ -1,26 +1,91 @@
 import classes from "./Main.module.css";
+import { ChangeEvent, useState } from "react";
+
+let pageviews, price;
 
 function Main() {
+  const [userInput, setUserInput] = useState<string>("3");
+  const [isBillingYearly, setIsBillingYearly] = useState<Boolean>(false);
+
+  const userInputHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setUserInput(e.target.value);
+  };
+
+  const billingOptionsHandler = () => {
+    setIsBillingYearly((state) => !state);
+  };
+
+  switch (userInput) {
+    case "1":
+      pageviews = "10k";
+      if (isBillingYearly) {
+        price = 8 - 8 * 0.25;
+      } else {
+        price = 8;
+      }
+      break;
+
+    case "2":
+      pageviews = "50k";
+      if (isBillingYearly) {
+        price = 12 - 12 * 0.25;
+      } else {
+        price = 12;
+      }
+      break;
+
+    case "3":
+      pageviews = "100k";
+      if (isBillingYearly) {
+        price = 16 - 16 * 0.25;
+      } else {
+        price = 16;
+      }
+      break;
+
+    case "4":
+      pageviews = "500k";
+      if (isBillingYearly) {
+        price = 24 - 24 * 0.25;
+      } else {
+        price = 24;
+      }
+      break;
+
+    case "5":
+      pageviews = "1m";
+      if (isBillingYearly) {
+        price = 36 - 36 * 0.25;
+      } else {
+        price = 36;
+      }
+      break;
+
+    default:
+      pageviews = 100;
+      price = 16;
+  }
+
   return (
     <main className={classes.main}>
       <div className={classes["first-section"]}>
-        <p className={classes.pageviews}>100k Pageviews</p>
-        <div className={classes["selector-bar-container"]}>
-          <div className={classes["progress-bar-container"]}>
-            <div className={classes["current-progress-bar"]}>
-              <div className={classes["icon-slider-container"]}>
-                <img src="./images/icon-slider.svg" alt="slider icon" />
-              </div>
-            </div>
-          </div>
-        </div>
+        <p className={classes.pageviews}>{pageviews} Pageviews</p>
+        <input
+          className={classes["input-range"]}
+          type="range"
+          min="1"
+          max="5"
+          defaultValue={userInput.toString()}
+          onChange={userInputHandler}
+        />
         <p className={classes.price}>
-          $16.00 <span>/ month</span>
+          ${price.toFixed(2)}
+          <span> / month</span>
         </p>
         <div className={classes["billing-options"]}>
           <p>Monthly Billing</p>
           <label className={classes.switch}>
-            <input type="checkbox" />
+            <input type="checkbox" onChange={billingOptionsHandler} />
             <span className={`${classes.slider} ${classes.round}`}></span>
           </label>
           <p>Yearly Billing</p>
