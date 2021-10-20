@@ -1,7 +1,9 @@
 import classes from "./Main.module.css";
 import { ChangeEvent, useState } from "react";
 
-let pageviews, price;
+let pageviews,
+  price,
+  currentProgress = 50;
 
 function Main() {
   const [userInput, setUserInput] = useState<string>("3");
@@ -18,6 +20,7 @@ function Main() {
   switch (userInput) {
     case "1":
       pageviews = "10k";
+      currentProgress = 0;
       if (isBillingYearly) {
         price = 8 - 8 * 0.25;
       } else {
@@ -27,6 +30,7 @@ function Main() {
 
     case "2":
       pageviews = "50k";
+      currentProgress = 25;
       if (isBillingYearly) {
         price = 12 - 12 * 0.25;
       } else {
@@ -36,6 +40,7 @@ function Main() {
 
     case "3":
       pageviews = "100k";
+      currentProgress = 50;
       if (isBillingYearly) {
         price = 16 - 16 * 0.25;
       } else {
@@ -45,6 +50,7 @@ function Main() {
 
     case "4":
       pageviews = "500k";
+      currentProgress = 75;
       if (isBillingYearly) {
         price = 24 - 24 * 0.25;
       } else {
@@ -54,6 +60,7 @@ function Main() {
 
     case "5":
       pageviews = "1m";
+      currentProgress = 100;
       if (isBillingYearly) {
         price = 36 - 36 * 0.25;
       } else {
@@ -70,14 +77,20 @@ function Main() {
     <main className={classes.main}>
       <div className={classes["first-section"]}>
         <p className={classes.pageviews}>{pageviews} Pageviews</p>
-        <input
-          className={classes["input-range"]}
-          type="range"
-          min="1"
-          max="5"
-          defaultValue={userInput.toString()}
-          onChange={userInputHandler}
-        />
+        <div className={classes["input-range-container"]}>
+          <input
+            className={classes["input-range"]}
+            type="range"
+            min="1"
+            max="5"
+            defaultValue={userInput.toString()}
+            onChange={userInputHandler}
+          />
+          <div
+            className={classes["progress-bar"]}
+            style={{ width: `${currentProgress}%` }}
+          />
+        </div>
         <p className={classes.price}>
           ${price.toFixed(2)}
           <span> / month</span>
